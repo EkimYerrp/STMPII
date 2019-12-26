@@ -1,0 +1,2399 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Movie Metrix</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="lib/jquery-ui/jquery-ui.min.css">
+<link rel="stylesheet" href="lib/jquery-ui/jquery-ui.structure.min.css">
+<link rel="stylesheet" href="lib/jquery-ui/jquery-ui.theme.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">    </head>
+    <body>
+        <nav id ="mainnavigation" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.php">Movie Metrix</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-year="2019" href="index.php?year=2019" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Switch Year
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item changeyearaction" data-year="2019" href="index.php?year=2019">2019</a>
+                    <a class="dropdown-item changeyearaction" data-year="2018" href="index.php?year=2018">2018</a>
+                    <a class="dropdown-item changeyearaction" data-year="2017" href="index.php?year=2017">2017</a>
+                    <a class="dropdown-item changeyearaction" data-year="2016" href="index.php?year=2016">2016</a>
+                    <a class="dropdown-item changeyearaction" data-year="2015" href="index.php?year=2015">2015</a>
+                </div>
+            </li>
+        </ul>
+        <span class="navbar-text yeardisplay">
+            Viewing movies from: <span class="currentyear">2019</span>
+        </span>
+    </div>
+</nav>        <div id="wrapper" class="container">
+                                    <div id="moviefilters">
+                        <form class="filtersort form-inline" method="post" action="index.php?action=filtermovies">
+                        <div class="form-group">
+                            <label>Filter:</label>
+                                <select class="form-control sortBy" name="orderBy">
+                                    <option value="_default">* Sort By</option>
+                                    <option value="date">Release Date</option>
+                                    <option value="ratings">Ratings</option>
+                                </select>
+                                <select class="form-control ratingsoptions" name="ratingsGroup">
+                                    <option value="imdb">IMdb</option>
+                                    <option value="rotten_tomatoes">Rotten Tomatoes</option>
+                                    <option value="metacritic">Metacritic</option>
+                                </select>
+                                <select class="form-control dateoptions" name="dateGroup">
+                                    <option value="newest">Newest to oldest</option>
+                                    <option value="oldest">Oldest to newest</option>
+                                </select>
+                                <select class="form-control ratingsorderoptions" name="ratingsOrder">
+                                    <option value="highest">Highest to lowest</option>
+                                    <option value="lowest">Lowest to highest</option>
+                                </select>
+                                <label>or </label>  
+                            </div> 
+                        </form>
+                        <form id="searchform" class="filtersort form-inline">
+                            <div class="form-group">
+                                
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search for a movie title" name="moviesearch">
+                            </div>
+                        </form>
+                        </div>
+                        <div id="progress">
+                            <div id="progressbar"></div>
+                        </div>
+                    <div id="movielist" class="container-fluid">
+    <p class="movieresultscount">Showing 109 movie(s)</p>
+<div class="movierow first row">
+                                <div id="movie_tt2139881" class="movieblock col-md-4">
+                    <h2>Long Shot </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2139881"><img class="detailslink" data-id="tt2139881" src="https://m.media-amazon.com/images/M/MV5BMmE4Mzk0OWQtMDI1OS00NDU3LWI2M2YtNzc1MGMxZGI3ZTE1XkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 81%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 67/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 03, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2139881" href="index.php?id=tt2139881">View Details</a>
+                </div>
+                                        <div id="movie_tt6146586" class="movieblock col-md-4">
+                    <h2>John Wick: Chapter 3 - Parabellum </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6146586"><img class="detailslink" data-id="tt6146586" src="https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 90%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 73/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 17, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6146586" href="index.php?id=tt6146586">View Details</a>
+                </div>
+                                        <div id="movie_tt2076822" class="movieblock col-md-4">
+                    <h2>Chaos Walking </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2076822"><img class="detailslink" data-id="tt2076822" src="https://m.media-amazon.com/images/M/MV5BMTY5ODQ0NDc0N15BMl5BanBnXkFtZTgwNTE4NzQ3MzI@._V1_SX300.jpg"></a></li>
+                                                    <li ><span class="releasespan">Mar 01, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2076822" href="index.php?id=tt2076822">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7734218" class="movieblock col-md-4">
+                    <h2>Stuber </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7734218"><img class="detailslink" data-id="tt7734218" src="https://m.media-amazon.com/images/M/MV5BOGE1ZjFhYzAtYWM4ZC00NGI1LWFmYzMtZWRhZDhjMjE4YzBjXkEyXkFqcGdeQXVyODQzNTE3ODc@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 42%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 42/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jul 12, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7734218" href="index.php?id=tt7734218">View Details</a>
+                </div>
+                                        <div id="movie_tt1946502" class="movieblock col-md-4">
+                    <h2>UglyDolls </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1946502"><img class="detailslink" data-id="tt1946502" src="https://m.media-amazon.com/images/M/MV5BMTc0NjE2ODM2OV5BMl5BanBnXkFtZTgwMjQyNDUzNzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 4.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 28%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 39/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 03, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1946502" href="index.php?id=tt1946502">View Details</a>
+                </div>
+                                        <div id="movie_tt6751668" class="movieblock col-md-4">
+                    <h2>Parasite </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6751668"><img class="detailslink" data-id="tt6751668" src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 8.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 99%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 96/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6751668" href="index.php?id=tt6751668">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt8244784" class="movieblock col-md-4">
+                    <h2>The Hunt </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8244784"><img class="detailslink" data-id="tt8244784" src="https://m.media-amazon.com/images/M/MV5BMGIwNTg5Y2MtYzExZS00MmU4LTgwY2MtMzI5ZTJkZmRmZmIyXkEyXkFqcGdeQXVyNjI4MDc1MzA@._V1_SX300.jpg"></a></li>
+                                                    <li ><span class="releasespan">Sep 27, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8244784" href="index.php?id=tt8244784">View Details</a>
+                </div>
+                                        <div id="movie_tt6811018" class="movieblock col-md-4">
+                    <h2>The Kid Who Would Be King </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6811018"><img class="detailslink" data-id="tt6811018" src="https://m.media-amazon.com/images/M/MV5BZjk1ZDE0ZDMtYmIxOC00ZmIwLThiOWQtMDFmYjc5ZjQzYTNlXkEyXkFqcGdeQXVyNjIxMTQ4OTc@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 90%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 66/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jan 25, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6811018" href="index.php?id=tt6811018">View Details</a>
+                </div>
+                                        <div id="movie_tt8623904" class="movieblock col-md-4">
+                    <h2>Last Christmas </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8623904"><img class="detailslink" data-id="tt8623904" src="https://m.media-amazon.com/images/M/MV5BNTQ4ZmY0NjgtYzVhNy00NzhiLTk3YTYtNzM1MTdjM2VhZDA3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 47%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 50/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8623904" href="index.php?id=tt8623904">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt5814534" class="movieblock col-md-4">
+                    <h2>Spies in Disguise </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5814534"><img class="detailslink" data-id="tt5814534" src="https://m.media-amazon.com/images/M/MV5BNzg1MzM3OWUtNjgzZC00NjMzLWE1NzAtOThiMDgyMjhhZDBhXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 52/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Dec 25, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5814534" href="index.php?id=tt5814534">View Details</a>
+                </div>
+                                        <div id="movie_tt1620981" class="movieblock col-md-4">
+                    <h2>The Addams Family </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1620981"><img class="detailslink" data-id="tt1620981" src="https://m.media-amazon.com/images/M/MV5BODBjOTAzZmMtNGJkOC00M2M3LWI1MTctZjZlMzdiODBkMzc0XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 43%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 46/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Oct 11, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1620981" href="index.php?id=tt1620981">View Details</a>
+                </div>
+                                        <div id="movie_tt4682804" class="movieblock col-md-4">
+                    <h2>Lucy in the Sky </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4682804"><img class="detailslink" data-id="tt4682804" src="https://m.media-amazon.com/images/M/MV5BNmEzMDkxYzItMjdiNC00YzA5LWJmYWMtMzc2Mjc1MTdjNDZiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 4.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 22%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 36/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 20, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4682804" href="index.php?id=tt4682804">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt2283336" class="movieblock col-md-4">
+                    <h2>Men in Black: International </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2283336"><img class="detailslink" data-id="tt2283336" src="https://m.media-amazon.com/images/M/MV5BMDZkODI2ZGItYTY5Yi00MTA4LWExY2ItM2ZmNjczYjM0NDg1XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 23%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 38/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 14, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2283336" href="index.php?id=tt2283336">View Details</a>
+                </div>
+                                        <div id="movie_tt6450804" class="movieblock col-md-4">
+                    <h2>Terminator: Dark Fate </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6450804"><img class="detailslink" data-id="tt6450804" src="https://m.media-amazon.com/images/M/MV5BNzhlYjE5MjMtZDJmYy00MGZmLTgwN2MtZGM0NTk2ZTczNmU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 70%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 54/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 01, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6450804" href="index.php?id=tt6450804">View Details</a>
+                </div>
+                                        <div id="movie_tt3281548" class="movieblock col-md-4">
+                    <h2>Little Women </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3281548"><img class="detailslink" data-id="tt3281548" src="https://m.media-amazon.com/images/M/MV5BY2QzYTQyYzItMzAwYi00YjZlLThjNTUtNzMyMDdkYzJiNWM4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 94%                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Dec 25, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3281548" href="index.php?id=tt3281548">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt4154796" class="movieblock col-md-4">
+                    <h2>Avengers: Endgame </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4154796"><img class="detailslink" data-id="tt4154796" src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 8.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 94%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 78/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 26, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4154796" href="index.php?id=tt4154796">View Details</a>
+                </div>
+                                        <div id="movie_tt1298644" class="movieblock col-md-4">
+                    <h2>The Hustle </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1298644"><img class="detailslink" data-id="tt1298644" src="https://m.media-amazon.com/images/M/MV5BMTc3MDcyNzE5N15BMl5BanBnXkFtZTgwNzE2MDE0NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 14%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 35/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 10, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1298644" href="index.php?id=tt1298644">View Details</a>
+                </div>
+                                        <div id="movie_tt2365580" class="movieblock col-md-4">
+                    <h2>Where'd You Go, Bernadette </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2365580"><img class="detailslink" data-id="tt2365580" src="https://m.media-amazon.com/images/M/MV5BNDZiY2MyN2ItZjYyMi00YWNiLTk3NTQtNzk3YWFlOTg1MzViXkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 49%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 51/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 16, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2365580" href="index.php?id=tt2365580">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt5884052" class="movieblock col-md-4">
+                    <h2>Pokémon Detective Pikachu </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5884052"><img class="detailslink" data-id="tt5884052" src="https://m.media-amazon.com/images/M/MV5BNDU4Mzc3NzE5NV5BMl5BanBnXkFtZTgwMzE1NzI1NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 68%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 53/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 10, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5884052" href="index.php?id=tt5884052">View Details</a>
+                </div>
+                                        <div id="movie_tt1478839" class="movieblock col-md-4">
+                    <h2>The Art of Racing in the Rain </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1478839"><img class="detailslink" data-id="tt1478839" src="https://m.media-amazon.com/images/M/MV5BZjU5ZTYzM2MtNDNhYi00YjU1LWE4MzEtODc0NmNlODZlMjlhXkEyXkFqcGdeQXVyNjg3MDMxNzU@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 44%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 43/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 09, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1478839" href="index.php?id=tt1478839">View Details</a>
+                </div>
+                                        <div id="movie_tt8637428" class="movieblock col-md-4">
+                    <h2>The Farewell </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8637428"><img class="detailslink" data-id="tt8637428" src="https://m.media-amazon.com/images/M/MV5BMWE3MjViNWUtY2VjYS00ZDBjLTllMzYtN2FkY2QwYmRiMDhjXkEyXkFqcGdeQXVyODQzNTE3ODc@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 99%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 89/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 09, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8637428" href="index.php?id=tt8637428">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7286456" class="movieblock col-md-4">
+                    <h2>Joker </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7286456"><img class="detailslink" data-id="tt7286456" src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 8.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 69%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 59/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Oct 04, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7286456" href="index.php?id=tt7286456">View Details</a>
+                </div>
+                                        <div id="movie_tt7752126" class="movieblock col-md-4">
+                    <h2>Brightburn </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7752126"><img class="detailslink" data-id="tt7752126" src="https://m.media-amazon.com/images/M/MV5BMjc0YzM2ZjItNzE3OS00NTRhLTkyNTUtMjY5Y2Y5NTU3OWI0XkEyXkFqcGdeQXVyNjU2NTI4MjE@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 57%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 44/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 24, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7752126" href="index.php?id=tt7752126">View Details</a>
+                </div>
+                                        <div id="movie_tt5606664" class="movieblock col-md-4">
+                    <h2>Doctor Sleep </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5606664"><img class="detailslink" data-id="tt5606664" src="https://m.media-amazon.com/images/M/MV5BYmY3NGJlYTItYmQ4OS00ZTEwLWIzODItMjMzNWU2MDE0NjZhXkEyXkFqcGdeQXVyMzQzMDA3MTI@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 76%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 59/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5606664" href="index.php?id=tt5606664">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6320628" class="movieblock col-md-4">
+                    <h2>Spider-Man: Far from Home </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6320628"><img class="detailslink" data-id="tt6320628" src="https://m.media-amazon.com/images/M/MV5BMGZlNTY1ZWUtYTMzNC00ZjUyLWE0MjQtMTMxN2E3ODYxMWVmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 90%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 69/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jul 02, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6320628" href="index.php?id=tt6320628">View Details</a>
+                </div>
+                                        <div id="movie_tt1950186" class="movieblock col-md-4">
+                    <h2>Ford v Ferrari </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1950186"><img class="detailslink" data-id="tt1950186" src="https://m.media-amazon.com/images/M/MV5BYzcyZDNlNDktOWRhYy00ODQ5LTg1ODQtZmFmZTIyMjg2Yjk5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 8.3/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 81/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 15, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1950186" href="index.php?id=tt1950186">View Details</a>
+                </div>
+                                        <div id="movie_tt8350360" class="movieblock col-md-4">
+                    <h2>Annabelle Comes Home </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8350360"><img class="detailslink" data-id="tt8350360" src="https://m.media-amazon.com/images/M/MV5BYmI4NDNiMmQtZTFkYi00ZDVmLThlYTAtMWJlMjU1M2I2ZmViXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 64%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 53/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 26, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8350360" href="index.php?id=tt8350360">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt4913966" class="movieblock col-md-4">
+                    <h2>The Curse of La Llorona </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4913966"><img class="detailslink" data-id="tt4913966" src="https://m.media-amazon.com/images/M/MV5BNjU4NjU4ZDktOTg2Ny00MWI2LThiMTAtMGFkZGE1MWI5MzhjXkEyXkFqcGdeQXVyODQxMTI4MjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 29%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 41/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 19, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4913966" href="index.php?id=tt4913966">View Details</a>
+                </div>
+                                        <div id="movie_tt8722346" class="movieblock col-md-4">
+                    <h2>Queen & Slim </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8722346"><img class="detailslink" data-id="tt8722346" src="https://m.media-amazon.com/images/M/MV5BMjIzYmJkZmEtM2RkZS00MDA4LTg4NjAtOGRkN2EwZmFmMWE4XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 75/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 27, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8722346" href="index.php?id=tt8722346">View Details</a>
+                </div>
+                                        <div id="movie_tt3361792" class="movieblock col-md-4">
+                    <h2>Tolkien </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3361792"><img class="detailslink" data-id="tt3361792" src="https://m.media-amazon.com/images/M/MV5BMjUzNzA1MDczOF5BMl5BanBnXkFtZTgwODY5OTI2NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 51%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 48/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 10, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3361792" href="index.php?id=tt3361792">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt8385474" class="movieblock col-md-4">
+                    <h2>A Dog's Journey </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8385474"><img class="detailslink" data-id="tt8385474" src="https://m.media-amazon.com/images/M/MV5BYjRhMWY0ODMtMmM3OC00ZGRmLWIyZjktZGQ0ZGE4MzcyZWE5XkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 50%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 43/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 17, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8385474" href="index.php?id=tt8385474">View Details</a>
+                </div>
+                                        <div id="movie_tt7984734" class="movieblock col-md-4">
+                    <h2>The Lighthouse </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7984734"><img class="detailslink" data-id="tt7984734" src="https://m.media-amazon.com/images/M/MV5BZmE0MGJhNmYtOWNjYi00Njc5LWE2YjEtMWMxZTVmODUwMmMxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 8.3/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 92%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 83/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 01, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7984734" href="index.php?id=tt7984734">View Details</a>
+                </div>
+                                        <div id="movie_tt2066051" class="movieblock col-md-4">
+                    <h2>Rocketman </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2066051"><img class="detailslink" data-id="tt2066051" src="https://m.media-amazon.com/images/M/MV5BYTJmMzc0YTctYmQzOS00YWJjLTgzMmEtYjE1NzA1N2QyYzE3XkEyXkFqcGdeQXVyNjg3MDMxNzU@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 69/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 31, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2066051" href="index.php?id=tt2066051">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt5977276" class="movieblock col-md-4">
+                    <h2>The Aftermath </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5977276"><img class="detailslink" data-id="tt5977276" src="https://m.media-amazon.com/images/M/MV5BMTk2MDEyNTE5M15BMl5BanBnXkFtZTgwMzY1NDM4NjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.3/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 27%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 43/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 15, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5977276" href="index.php?id=tt5977276">View Details</a>
+                </div>
+                                        <div id="movie_tt2386490" class="movieblock col-md-4">
+                    <h2>How to Train Your Dragon: The Hidden World </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2386490"><img class="detailslink" data-id="tt2386490" src="https://m.media-amazon.com/images/M/MV5BMjIwMDIwNjAyOF5BMl5BanBnXkFtZTgwNDE1MDc2NTM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 90%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 71/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 22, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2386490" href="index.php?id=tt2386490">View Details</a>
+                </div>
+                                        <div id="movie_tt7975244" class="movieblock col-md-4">
+                    <h2>Jumanji: The Next Level </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7975244"><img class="detailslink" data-id="tt7975244" src="https://m.media-amazon.com/images/M/MV5BOTVjMmFiMDUtOWQ4My00YzhmLWE3MzEtODM1NDFjMWEwZTRkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 66%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 58/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Dec 13, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7975244" href="index.php?id=tt7975244">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt5461944" class="movieblock col-md-4">
+                    <h2>Hotel Mumbai </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5461944"><img class="detailslink" data-id="tt5461944" src="https://m.media-amazon.com/images/M/MV5BYTJlZWY2YjYtZGIxMy00MDEwLTliNzMtZGM3MDQ1NzlmNDY1XkEyXkFqcGdeQXVyNDY2MjcyOTQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 75%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 62/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 29, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5461944" href="index.php?id=tt5461944">View Details</a>
+                </div>
+                                        <div id="movie_tt5822564" class="movieblock col-md-4">
+                    <h2>The Kitchen </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5822564"><img class="detailslink" data-id="tt5822564" src="https://m.media-amazon.com/images/M/MV5BZGEwMWJlNzMtMjQ4YS00YjI4LTkwZTYtMGFiZTY5YmE2ZTIwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 22%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 35/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 09, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5822564" href="index.php?id=tt5822564">View Details</a>
+                </div>
+                                        <div id="movie_tt2584384" class="movieblock col-md-4">
+                    <h2>Jojo Rabbit </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2584384"><img class="detailslink" data-id="tt2584384" src="https://m.media-amazon.com/images/M/MV5BZjU0Yzk2MzEtMjAzYy00MzY0LTg2YmItM2RkNzdkY2ZhN2JkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 8.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 79%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 58/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2584384" href="index.php?id=tt2584384">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt2527338" class="movieblock col-md-4">
+                    <h2>Star Wars: The Rise of Skywalker </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2527338"><img class="detailslink" data-id="tt2527338" src="https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SX300.jpg"></a></li>
+                                                    <li ><span class="releasespan">Dec 20, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2527338" href="index.php?id=tt2527338">View Details</a>
+                </div>
+                                        <div id="movie_tt5113040" class="movieblock col-md-4">
+                    <h2>The Secret Life of Pets 2 </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5113040"><img class="detailslink" data-id="tt5113040" src="https://m.media-amazon.com/images/M/MV5BMzdlMWQzZmItMDA5Ny00MGFjLTk0MDAtYjgzMmMyNTEwMzdhXkEyXkFqcGdeQXVyODQzNTE3ODc@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 59%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 55/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 07, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5113040" href="index.php?id=tt5113040">View Details</a>
+                </div>
+                                        <div id="movie_tt8579674" class="movieblock col-md-4">
+                    <h2>1917 </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8579674"><img class="detailslink" data-id="tt8579674" src="https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 8.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 84/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Dec 25, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8579674" href="index.php?id=tt8579674">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt3513498" class="movieblock col-md-4">
+                    <h2>The Lego Movie 2: The Second Part </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3513498"><img class="detailslink" data-id="tt3513498" src="https://m.media-amazon.com/images/M/MV5BMTkyOTkwNDc1N15BMl5BanBnXkFtZTgwNzkyMzk3NjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 85%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 65/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3513498" href="index.php?id=tt3513498">View Details</a>
+                </div>
+                                        <div id="movie_tt8085790" class="movieblock col-md-4">
+                    <h2>Little </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8085790"><img class="detailslink" data-id="tt8085790" src="https://m.media-amazon.com/images/M/MV5BMTU2NDYwNzkzMV5BMl5BanBnXkFtZTgwNjAyMjMxNzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 47%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 49/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 12, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8085790" href="index.php?id=tt8085790">View Details</a>
+                </div>
+                                        <div id="movie_tt5033998" class="movieblock col-md-4">
+                    <h2>Charlie's Angels </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5033998"><img class="detailslink" data-id="tt5033998" src="https://m.media-amazon.com/images/M/MV5BN2VkMjQwZWMtMzc1NC00ZjJiLWJlNTMtNmRjOTE2ZTJmYzUwXkEyXkFqcGdeQXVyMjUxMTY3ODM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 3.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 59%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 52/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 15, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5033998" href="index.php?id=tt5033998">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt3513548" class="movieblock col-md-4">
+                    <h2>Richard Jewell </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3513548"><img class="detailslink" data-id="tt3513548" src="https://m.media-amazon.com/images/M/MV5BOTFlODg1MTEtZTJhOC00OTY1LWE0YzctZjRlODdkYWY5ZDM4XkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SX300.jpg"></a></li>
+                                                    <li ><span class="releasespan">Dec 13, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3513548" href="index.php?id=tt3513548">View Details</a>
+                </div>
+                                        <div id="movie_tt4154664" class="movieblock col-md-4">
+                    <h2>Captain Marvel </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4154664"><img class="detailslink" data-id="tt4154664" src="https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 78%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 64/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4154664" href="index.php?id=tt4154664">View Details</a>
+                </div>
+                                        <div id="movie_tt7349950" class="movieblock col-md-4">
+                    <h2>It Chapter Two </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7349950"><img class="detailslink" data-id="tt7349950" src="https://m.media-amazon.com/images/M/MV5BYTJlNjlkZTktNjEwOS00NzI5LTlkNDAtZmEwZDFmYmM2MjU2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 63%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 58/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 06, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7349950" href="index.php?id=tt7349950">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7054636" class="movieblock col-md-4">
+                    <h2>A Madea Family Funeral </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7054636"><img class="detailslink" data-id="tt7054636" src="https://m.media-amazon.com/images/M/MV5BYTExYTc3YTMtMDY2YS00YTFhLTgwODEtNWQ2MmMzOGZhNTU5XkEyXkFqcGdeQXVyNDExODY2MjU@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 4.3/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 12%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 39/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 01, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7054636" href="index.php?id=tt7054636">View Details</a>
+                </div>
+                                        <div id="movie_tt4520988" class="movieblock col-md-4">
+                    <h2>Frozen II </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4520988"><img class="detailslink" data-id="tt4520988" src="https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.3/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 84%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 64/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 22, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4520988" href="index.php?id=tt4520988">View Details</a>
+                </div>
+                                        <div id="movie_tt6866224" class="movieblock col-md-4">
+                    <h2>The Hummingbird Project </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6866224"><img class="detailslink" data-id="tt6866224" src="https://m.media-amazon.com/images/M/MV5BMTA2MDM2OTMzODNeQTJeQWpwZ15BbWU4MDgxNjExMjcz._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 57%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 58/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 22, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6866224" href="index.php?id=tt6866224">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6398184" class="movieblock col-md-4">
+                    <h2>Downton Abbey </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6398184"><img class="detailslink" data-id="tt6398184" src="https://m.media-amazon.com/images/M/MV5BMmQxNGRkMjYtZTAyMy00MDUyLThiNmYtODI1NTkyNmI0ZTNlXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 84%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 64/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 20, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6398184" href="index.php?id=tt6398184">View Details</a>
+                </div>
+                                        <div id="movie_tt5563334" class="movieblock col-md-4">
+                    <h2>The Good Liar </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5563334"><img class="detailslink" data-id="tt5563334" src="https://m.media-amazon.com/images/M/MV5BN2VhNTY5ZTUtYzc1NC00NjUyLWI1NDQtYWE3YmJlNjQ3OGVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 65%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 55/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 15, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5563334" href="index.php?id=tt5563334">View Details</a>
+                </div>
+                                        <div id="movie_tt4463894" class="movieblock col-md-4">
+                    <h2>Shaft </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4463894"><img class="detailslink" data-id="tt4463894" src="https://m.media-amazon.com/images/M/MV5BNmExNGZmYzItZTMzMi00YWJjLWJkYmQtMDg5MjgzYjYyZDk1XkEyXkFqcGdeQXVyNjg3MDMxNzU@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 32%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 40/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 14, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4463894" href="index.php?id=tt4463894">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6513120" class="movieblock col-md-4">
+                    <h2>Fighting with My Family </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6513120"><img class="detailslink" data-id="tt6513120" src="https://m.media-amazon.com/images/M/MV5BNWM0NGUxMzUtMjRlZS00OWZlLTlkZDMtMzJhOWVmZDY2ODczXkEyXkFqcGdeQXVyOTQxNzM2MjY@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 92%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 68/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 22, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6513120" href="index.php?id=tt6513120">View Details</a>
+                </div>
+                                        <div id="movie_tt6348138" class="movieblock col-md-4">
+                    <h2>Missing Link </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6348138"><img class="detailslink" data-id="tt6348138" src="https://m.media-amazon.com/images/M/MV5BMWFmNWZmZWYtMWM3OC00YTYyLWIxNDMtOTRjNzhiYWQ0MDIwXkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 89%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 68/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 12, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6348138" href="index.php?id=tt6348138">View Details</a>
+                </div>
+                                        <div id="movie_tt6565702" class="movieblock col-md-4">
+                    <h2>Dark Phoenix </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6565702"><img class="detailslink" data-id="tt6565702" src="https://m.media-amazon.com/images/M/MV5BMmZmYTgwZGItNDIxMS00MmRkLWEzODQtYTllNzM0ZWE1NmQ5XkEyXkFqcGdeQXVyODQzNTE3ODc@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 23%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 43/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 07, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6565702" href="index.php?id=tt6565702">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6806448" class="movieblock col-md-4">
+                    <h2>Fast & Furious Presents: Hobbs & Shaw </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6806448"><img class="detailslink" data-id="tt6806448" src="https://m.media-amazon.com/images/M/MV5BOTIzYmUyMmEtMWQzNC00YzExLTk3MzYtZTUzYjMyMmRiYzIwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 67%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 60/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 02, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6806448" href="index.php?id=tt6806448">View Details</a>
+                </div>
+                                        <div id="movie_tt5697572" class="movieblock col-md-4">
+                    <h2>Cats </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5697572"><img class="detailslink" data-id="tt5697572" src="https://m.media-amazon.com/images/M/MV5BNTE4NWRhYmQtOTY4YS00OWMwLWEwYWUtZjVjNDhhODc5YzNmXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SX300.jpg"></a></li>
+                                                    <li ><span class="releasespan">Dec 20, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5697572" href="index.php?id=tt5697572">View Details</a>
+                </div>
+                                        <div id="movie_tt6823368" class="movieblock col-md-4">
+                    <h2>Glass </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6823368"><img class="detailslink" data-id="tt6823368" src="https://m.media-amazon.com/images/M/MV5BMTY1OTA2MjI5OV5BMl5BanBnXkFtZTgwNzkxMjU4NjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 37%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 43/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jan 18, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6823368" href="index.php?id=tt6823368">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt5941692" class="movieblock col-md-4">
+                    <h2>Miss Bala </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5941692"><img class="detailslink" data-id="tt5941692" src="https://m.media-amazon.com/images/M/MV5BMTcxNzY3Mzk5OF5BMl5BanBnXkFtZTgwNjQwODU1NjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 22%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 41/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 01, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5941692" href="index.php?id=tt5941692">View Details</a>
+                </div>
+                                        <div id="movie_tt6105098" class="movieblock col-md-4">
+                    <h2>The Lion King </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6105098"><img class="detailslink" data-id="tt6105098" src="https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 53%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 55/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jul 19, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6105098" href="index.php?id=tt6105098">View Details</a>
+                </div>
+                                        <div id="movie_tt7504726" class="movieblock col-md-4">
+                    <h2>Call of the Wild </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7504726"><img class="detailslink" data-id="tt7504726" src="images/imagenotfound.png"></a></li>
+                                                    <li ><span class="releasespan">Dec 25, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7504726" href="index.php?id=tt7504726">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6394270" class="movieblock col-md-4">
+                    <h2>Bombshell </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6394270"><img class="detailslink" data-id="tt6394270" src="https://m.media-amazon.com/images/M/MV5BZjlhOWE3YjktY2MzOC00ZmQ1LWIwNjgtZmVhZmFjZGExMzgyXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SX300.jpg"></a></li>
+                                                    <li ><span class="releasespan">Dec 20, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6394270" href="index.php?id=tt6394270">View Details</a>
+                </div>
+                                        <div id="movie_tt8946378" class="movieblock col-md-4">
+                    <h2>Knives Out </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8946378"><img class="detailslink" data-id="tt8946378" src="https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 96%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 84/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 27, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8946378" href="index.php?id=tt8946378">View Details</a>
+                </div>
+                                        <div id="movie_tt7549996" class="movieblock col-md-4">
+                    <h2>Judy </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7549996"><img class="detailslink" data-id="tt7549996" src="https://m.media-amazon.com/images/M/MV5BYmE0OTE5NWItMGYyZi00MzUxLWFjN2QtYzBkZGRjZGVmMGFmXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 83%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 66/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Oct 04, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7549996" href="index.php?id=tt7549996">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt4807408" class="movieblock col-md-4">
+                    <h2>The Best of Enemies </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4807408"><img class="detailslink" data-id="tt4807408" src="https://m.media-amazon.com/images/M/MV5BMjQ5MjA2NDkyM15BMl5BanBnXkFtZTgwNTIwNjUzNzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 55%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 49/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 05, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4807408" href="index.php?id=tt4807408">View Details</a>
+                </div>
+                                        <div id="movie_tt4777008" class="movieblock col-md-4">
+                    <h2>Maleficent: Mistress of Evil </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4777008"><img class="detailslink" data-id="tt4777008" src="https://m.media-amazon.com/images/M/MV5BZjJiYTExOTAtNWU0Yi00NzJjLTkwOTgtOTU2NWM1ZjJmYWVhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 40%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 43/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Oct 18, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4777008" href="index.php?id=tt4777008">View Details</a>
+                </div>
+                                        <div id="movie_tt1489887" class="movieblock col-md-4">
+                    <h2>Booksmart </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1489887"><img class="detailslink" data-id="tt1489887" src="https://m.media-amazon.com/images/M/MV5BMjEzMjcxNjA2Nl5BMl5BanBnXkFtZTgwMjAxMDM2NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 97%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 84/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 24, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1489887" href="index.php?id=tt1489887">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7339248" class="movieblock col-md-4">
+                    <h2>The Art of Self-Defense </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7339248"><img class="detailslink" data-id="tt7339248" src="https://m.media-amazon.com/images/M/MV5BZDlkOGE4YTUtYWRlZS00YjFkLWE3NmUtNzNlNjdiZTk2NzdhXkEyXkFqcGdeQXVyNDY2MjcyOTQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 84%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 65/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jul 19, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7339248" href="index.php?id=tt7339248">View Details</a>
+                </div>
+                                        <div id="movie_tt6511932" class="movieblock col-md-4">
+                    <h2>The Beach Bum </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6511932"><img class="detailslink" data-id="tt6511932" src="https://m.media-amazon.com/images/M/MV5BMTY3MDUzMTAzOV5BMl5BanBnXkFtZTgwNDk3ODQyNzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 55%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 55/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 29, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6511932" href="index.php?id=tt6511932">View Details</a>
+                </div>
+                                        <div id="movie_tt6189022" class="movieblock col-md-4">
+                    <h2>Angel Has Fallen </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6189022"><img class="detailslink" data-id="tt6189022" src="https://m.media-amazon.com/images/M/MV5BYmRmMWZhZGItYzA4MC00ZDYyLWE0OTMtYmM0MWRiN2Q4NGU2XkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 39%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 45/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 23, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6189022" href="index.php?id=tt6189022">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt3861390" class="movieblock col-md-4">
+                    <h2>Dumbo </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3861390"><img class="detailslink" data-id="tt3861390" src="https://m.media-amazon.com/images/M/MV5BNjMxMDE0MDI1Ml5BMl5BanBnXkFtZTgwMzExNTU3NjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.3/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 47%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 51/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 29, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3861390" href="index.php?id=tt3861390">View Details</a>
+                </div>
+                                        <div id="movie_tt10481868" class="movieblock col-md-4">
+                    <h2>Black Christmas </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt10481868"><img class="detailslink" data-id="tt10481868" src="https://m.media-amazon.com/images/M/MV5BMzczYzk4NWUtY2I0NC00OWEzLTgxYzAtOGM3NGU1ZjZlOGQxXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_SX300.jpg"></a></li>
+                                                    <li ><span class="releasespan">Dec 13, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt10481868" href="index.php?id=tt10481868">View Details</a>
+                </div>
+                                        <div id="movie_tt2274648" class="movieblock col-md-4">
+                    <h2>Hellboy </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2274648"><img class="detailslink" data-id="tt2274648" src="https://m.media-amazon.com/images/M/MV5BODdkMDQzMzItZDc4YS00OGM4LTkxNTQtNjUzNzU0ZmJkMWY2XkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 17%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 31/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 12, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2274648" href="index.php?id=tt2274648">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6095472" class="movieblock col-md-4">
+                    <h2>The Angry Birds Movie 2 </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6095472"><img class="detailslink" data-id="tt6095472" src="https://m.media-amazon.com/images/M/MV5BYzdkNGJhNzQtMjY1OC00MDI3LTk0ZDUtNzU0MGZiY2YwZGUxXkEyXkFqcGdeQXVyNzMxNjQxMTk@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 73%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 60/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 14, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6095472" href="index.php?id=tt6095472">View Details</a>
+                </div>
+                                        <div id="movie_tt0448115" class="movieblock col-md-4">
+                    <h2>Shazam! </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt0448115"><img class="detailslink" data-id="tt0448115" src="https://m.media-amazon.com/images/M/MV5BYTE0Yjc1NzUtMjFjMC00Y2I3LTg3NGYtNGRlMGJhYThjMTJmXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 90%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 70/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 05, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt0448115" href="index.php?id=tt0448115">View Details</a>
+                </div>
+                                        <div id="movie_tt4975920" class="movieblock col-md-4">
+                    <h2>The Kid </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4975920"><img class="detailslink" data-id="tt4975920" src="https://m.media-amazon.com/images/M/MV5BNTI0NzQxOTMwOF5BMl5BanBnXkFtZTgwMjAxMzg0NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 45%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 51/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4975920" href="index.php?id=tt4975920">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt2452244" class="movieblock col-md-4">
+                    <h2>Isn't It Romantic </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2452244"><img class="detailslink" data-id="tt2452244" src="https://m.media-amazon.com/images/M/MV5BZGE1NGYxOWItODdmMy00NWNhLTgxZmMtYmVjYmViMGI0NTdmXkEyXkFqcGdeQXVyNzE2MTQyMzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 70%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 60/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 13, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2452244" href="index.php?id=tt2452244">View Details</a>
+                </div>
+                                        <div id="movie_tt5503686" class="movieblock col-md-4">
+                    <h2>Hustlers </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt5503686"><img class="detailslink" data-id="tt5503686" src="https://m.media-amazon.com/images/M/MV5BNjM5ZTNiNGMtMDA2OC00MDYyLWEyNzAtOWZmMzFlY2VmOWM4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.5/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 88%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 79/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 13, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt5503686" href="index.php?id=tt5503686">View Details</a>
+                </div>
+                                        <div id="movie_tt8151874" class="movieblock col-md-4">
+                    <h2>Honey Boy </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8151874"><img class="detailslink" data-id="tt8151874" src="https://m.media-amazon.com/images/M/MV5BZWQ5YThjZjAtNWM3ZC00MDJjLWIzNDktY2Y2Y2FmMTFiNWJmXkEyXkFqcGdeQXVyMTA2MDQ3MTQ3._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 93%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 70/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8151874" href="index.php?id=tt8151874">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt3741700" class="movieblock col-md-4">
+                    <h2>Godzilla: King of the Monsters </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3741700"><img class="detailslink" data-id="tt3741700" src="https://m.media-amazon.com/images/M/MV5BOGFjYWNkMTMtMTg1ZC00Y2I4LTg0ZTYtN2ZlMzI4MGQwNzg4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 42%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 48/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 31, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3741700" href="index.php?id=tt3741700">View Details</a>
+                </div>
+                                        <div id="movie_tt0837563" class="movieblock col-md-4">
+                    <h2>Pet Sematary </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt0837563"><img class="detailslink" data-id="tt0837563" src="https://m.media-amazon.com/images/M/MV5BMjJiN2UwYWItNWJjNi00Zjg4LWE5NmItMmM4N2I3ZjY3OTY2XkEyXkFqcGdeQXVyODQxMTI4MjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 57/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Apr 05, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt0837563" href="index.php?id=tt0837563">View Details</a>
+                </div>
+                                        <div id="movie_tt1979376" class="movieblock col-md-4">
+                    <h2>Toy Story 4 </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1979376"><img class="detailslink" data-id="tt1979376" src="https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1Mzg2NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 97%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 84/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 21, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1979376" href="index.php?id=tt1979376">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt8155288" class="movieblock col-md-4">
+                    <h2>Happy Death Day 2U </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8155288"><img class="detailslink" data-id="tt8155288" src="https://m.media-amazon.com/images/M/MV5BMTg0NzkwMzQyMV5BMl5BanBnXkFtZTgwNDcxMTMyNzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 70%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 57/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 13, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8155288" href="index.php?id=tt8155288">View Details</a>
+                </div>
+                                        <div id="movie_tt3224458" class="movieblock col-md-4">
+                    <h2>A Beautiful Day in the Neighborhood </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3224458"><img class="detailslink" data-id="tt3224458" src="https://m.media-amazon.com/images/M/MV5BYTc1OWFmZDYtNDkzMy00ZjM2LTkxZDItM2E3ZTg3NTE1ZWE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 80/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 22, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3224458" href="index.php?id=tt3224458">View Details</a>
+                </div>
+                                        <div id="movie_tt4199898" class="movieblock col-md-4">
+                    <h2>Playmobil: The Movie </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4199898"><img class="detailslink" data-id="tt4199898" src="https://m.media-amazon.com/images/M/MV5BMGNlMjY2Y2MtNWVjZS00NDY5LTkwNzYtOTAxODg3Y2ZiY2Q3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 4.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 24%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 25/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Dec 06, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4199898" href="index.php?id=tt4199898">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7343762" class="movieblock col-md-4">
+                    <h2>Good Boys </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7343762"><img class="detailslink" data-id="tt7343762" src="https://m.media-amazon.com/images/M/MV5BMTc1NjIzODAxMF5BMl5BanBnXkFtZTgwMTgzNzk1NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 80%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 60/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 16, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7343762" href="index.php?id=tt7343762">View Details</a>
+                </div>
+                                        <div id="movie_tt8688634" class="movieblock col-md-4">
+                    <h2>21 Bridges </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8688634"><img class="detailslink" data-id="tt8688634" src="https://m.media-amazon.com/images/M/MV5BYTg4YzEzNDQtZDAxOS00M2YyLTljZWEtNjk4YTc4NDM2NTBhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.6/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 50%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 51/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 22, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8688634" href="index.php?id=tt8688634">View Details</a>
+                </div>
+                                        <div id="movie_tt1206885" class="movieblock col-md-4">
+                    <h2>Rambo: Last Blood </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1206885"><img class="detailslink" data-id="tt1206885" src="https://m.media-amazon.com/images/M/MV5BNTAxZWM2OTgtOTQzOC00ZTI5LTgyYjktZTRhYWM4YWQxNWI0XkEyXkFqcGdeQXVyMjMwNDgzNjc@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 26/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 20, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1206885" href="index.php?id=tt1206885">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7634968" class="movieblock col-md-4">
+                    <h2>What Men Want </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7634968"><img class="detailslink" data-id="tt7634968" src="https://m.media-amazon.com/images/M/MV5BMTYxNjE2NjIwOF5BMl5BanBnXkFtZTgwMjE0MzkxNzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 43%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 49/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 08, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7634968" href="index.php?id=tt7634968">View Details</a>
+                </div>
+                                        <div id="movie_tt6428676" class="movieblock col-md-4">
+                    <h2>Wonder Park </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6428676"><img class="detailslink" data-id="tt6428676" src="https://m.media-amazon.com/images/M/MV5BMjI5MTQ5NzE4Nl5BMl5BanBnXkFtZTgwNTk2MDA5NjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 33%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 45/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 15, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6428676" href="index.php?id=tt6428676">View Details</a>
+                </div>
+                                        <div id="movie_tt1560220" class="movieblock col-md-4">
+                    <h2>Zombieland: Double Tap </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1560220"><img class="detailslink" data-id="tt1560220" src="https://m.media-amazon.com/images/M/MV5BYjcwNjZhNGYtOGNlNy00NGI3LTlmODMtMGZlMjA3YjA0Njg0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 69%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 56/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Oct 18, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1560220" href="index.php?id=tt1560220">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7798634" class="movieblock col-md-4">
+                    <h2>Ready or Not </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7798634"><img class="detailslink" data-id="tt7798634" src="https://m.media-amazon.com/images/M/MV5BYzBkMzAyMDUtZTFkZS00OWUyLTgwM2ItNGI3MTQ5NzA3NTVkXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 88%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 64/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 21, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7798634" href="index.php?id=tt7798634">View Details</a>
+                </div>
+                                        <div id="movie_tt7131622" class="movieblock col-md-4">
+                    <h2>Once Upon a Time ... in Hollywood </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7131622"><img class="detailslink" data-id="tt7131622" src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 85%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 83/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jul 26, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7131622" href="index.php?id=tt7131622">View Details</a>
+                </div>
+                                        <div id="movie_tt0385887" class="movieblock col-md-4">
+                    <h2>Motherless Brooklyn </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt0385887"><img class="detailslink" data-id="tt0385887" src="https://m.media-amazon.com/images/M/MV5BNzQ0Mjk1YjItNWI1Ny00NWE2LWFlYTAtYjViY2YzMTVlOGVmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 61%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 60/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 01, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt0385887" href="index.php?id=tt0385887">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6324278" class="movieblock col-md-4">
+                    <h2>Abominable </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6324278"><img class="detailslink" data-id="tt6324278" src="https://m.media-amazon.com/images/M/MV5BMTYzY2U0NjctNDJkNS00MmE3LWFiZGQtZjllZTIzYTQ4ODJkXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 80%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 61/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 27, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6324278" href="index.php?id=tt6324278">View Details</a>
+                </div>
+                                        <div id="movie_tt3387520" class="movieblock col-md-4">
+                    <h2>Scary Stories to Tell in the Dark </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3387520"><img class="detailslink" data-id="tt3387520" src="https://m.media-amazon.com/images/M/MV5BNjNiM2E3NDItNGU5NS00N2UwLTk2YWItZWRmMGFlNjJhYzE3XkEyXkFqcGdeQXVyOTQ5MTIwMjM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 78%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 61/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 09, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3387520" href="index.php?id=tt3387520">View Details</a>
+                </div>
+                                        <div id="movie_tt4648786" class="movieblock col-md-4">
+                    <h2>Harriet </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt4648786"><img class="detailslink" data-id="tt4648786" src="https://m.media-amazon.com/images/M/MV5BNmE1Y2JjMDEtZDAyOC00NjFiLWJlNjAtMjA3MDMzZGUxMDViXkEyXkFqcGdeQXVyMTA2MDQ3MTQ3._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 73%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 66/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Nov 01, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt4648786" href="index.php?id=tt4648786">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt3864056" class="movieblock col-md-4">
+                    <h2>The Goldfinch </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt3864056"><img class="detailslink" data-id="tt3864056" src="https://m.media-amazon.com/images/M/MV5BY2ZmNmUzNTctYTA3Mi00ZTg3LWFmMWMtYzU2ZjA3NDRmODIzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.3/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 24%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 40/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 13, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt3864056" href="index.php?id=tt3864056">View Details</a>
+                </div>
+                                        <div id="movie_tt8364368" class="movieblock col-md-4">
+                    <h2>Crawl </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8364368"><img class="detailslink" data-id="tt8364368" src="https://m.media-amazon.com/images/M/MV5BNTk4MTliYzgtOGI2Ni00N2I5LTg4MjktZTkzZTE0MWVjNGEyXkEyXkFqcGdeQXVyMTA3MTA4Mzgw._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.2/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 83%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 60/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jul 12, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8364368" href="index.php?id=tt8364368">View Details</a>
+                </div>
+                                        <div id="movie_tt2935510" class="movieblock col-md-4">
+                    <h2>Ad Astra </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt2935510"><img class="detailslink" data-id="tt2935510" src="https://m.media-amazon.com/images/M/MV5BZTllZTdlOGEtZTBmMi00MGQ5LWFjN2MtOGEyZTliNGY1MzFiXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.8/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 84%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 80/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Sep 20, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt2935510" href="index.php?id=tt2935510">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt7547410" class="movieblock col-md-4">
+                    <h2>Dora and the Lost City of Gold </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt7547410"><img class="detailslink" data-id="tt7547410" src="https://m.media-amazon.com/images/M/MV5BOTVhMzYxNjgtYzYwOC00MGIwLWJmZGEtMjgwMzgxMWUwNmRhXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.0/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 84%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 63/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Aug 09, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt7547410" href="index.php?id=tt7547410">View Details</a>
+                </div>
+                                        <div id="movie_tt8079248" class="movieblock col-md-4">
+                    <h2>Yesterday </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8079248"><img class="detailslink" data-id="tt8079248" src="https://m.media-amazon.com/images/M/MV5BMjQ0NTI0NjkyN15BMl5BanBnXkFtZTgwNzY0MTE0NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 63%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 56/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 28, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8079248" href="index.php?id=tt8079248">View Details</a>
+                </div>
+                                        <div id="movie_tt6139732" class="movieblock col-md-4">
+                    <h2>Aladdin </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6139732"><img class="detailslink" data-id="tt6139732" src="https://m.media-amazon.com/images/M/MV5BMjQ2ODIyMjY4MF5BMl5BanBnXkFtZTgwNzY4ODI2NzM@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.1/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 53/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">May 24, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6139732" href="index.php?id=tt6139732">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt6857112" class="movieblock col-md-4">
+                    <h2>Us </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt6857112"><img class="detailslink" data-id="tt6857112" src="https://m.media-amazon.com/images/M/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 6.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 93%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 81/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Mar 22, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt6857112" href="index.php?id=tt6857112">View Details</a>
+                </div>
+                                        <div id="movie_tt1025100" class="movieblock col-md-4">
+                    <h2>Gemini Man </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt1025100"><img class="detailslink" data-id="tt1025100" src="https://m.media-amazon.com/images/M/MV5BNjI5OTNkMzUtZDYzYy00NWQ5LTg4YzYtZmZjZDI0MGQzNGY2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.7/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 26%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 38/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Oct 11, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt1025100" href="index.php?id=tt1025100">View Details</a>
+                </div>
+                                        <div id="movie_tt8663516" class="movieblock col-md-4">
+                    <h2>Child's Play </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt8663516"><img class="detailslink" data-id="tt8663516" src="https://m.media-amazon.com/images/M/MV5BNTNlNjIxNjktOWUyMS00YWY5LWEwZGItMjZmODJlZWNiZGM2XkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 5.9/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 48/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Jun 21, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt8663516" href="index.php?id=tt8663516">View Details</a>
+                </div>
+                                        </div>
+                <div class="movierow row">
+                                        <div id="movie_tt0437086" class="movieblock col-md-4">
+                    <h2>Alita: Battle Angel </h2>
+                    <ul class="moviedetailslist">
+                        <li><a href="index.php?id=tt0437086"><img class="detailslink" data-id="tt0437086" src="https://m.media-amazon.com/images/M/MV5BNzVhMjcxYjYtOTVhOS00MzQ1LWFiNTAtZmY2ZmJjNjIxMjllXkEyXkFqcGdeQXVyNTc5OTMwOTQ@._V1_SX300.jpg"></a></li>
+                                                        <ul>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Internet Movie Database: 7.4/10                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Rotten Tomatoes: 61%                                        </span>
+                                    </li>
+                                                                    <li >
+                                        <span class="releasespan">
+                                            Metacritic: 53/100                                        </span>
+                                    </li>
+                                                            </ul>    
+                                                    <li ><span class="releasespan">Feb 14, 2019</span></li>
+                    </ul>
+                    <a class="detailslink" data-id="tt0437086" href="index.php?id=tt0437086">View Details</a>
+                </div>
+            </div>                        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="javascript/animation.js"></script>
+<script src="javascript/ajax.js"></script>    </body>
+</html>
+
